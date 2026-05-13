@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build-publish:
@@ -12,6 +12,7 @@ jobs:
 
     env:
       PROJECT_PATH: OSCAvatarRecord.csproj
+      PROGRAM_PATH: Program.cs
       PUBLISH_DIR: bin/Release/net8.0-windows/win-x64/publish
       ARTIFACT_NAME: OSCAvatarRecord-publish
 
@@ -60,3 +61,43 @@ jobs:
           path: ${{ steps.archive.outputs.archive_name }}
           if-no-files-found: error
           retention-days: 30
+
+      - name: Extract release version
+        id: version
+        run: |
+          $match = Select-String -Path $env:PROGRAM_PATH -Pattern 'AssemblyInformationalVersion\("([^"]+)"\)'
+          if ($null -eq $match -or $match.Matches.Count -eq 0) {
+            throw "AssemblyInformationalVersion not found in $env:PROGRAM_PATH"
+          }
+
+          $version = $match.Matches[0].Groups[1].Value.Trim()
+          if ([string]::IsNullOrWhiteSpace($version)) {
+            throw "AssemblyInformationalVersion in $env:PROGRAM_PATH is empty"
+          }
+
+          $tag = "v$version"
+          "version=$version" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          "tag=$tag" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+        shell: pwsh
+
+      - name: Check if release tag exists
+        id: tag_check
+        run: |
+          git fetch --tags --force
+          git rev-parse --verify --quiet "refs/tags/${{ steps.version.outputs.tag }}" | Out-Null
+          if ($LASTEXITCODE -eq 0) {
+            "exists=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          } else {
+            "exists=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+          }
+        shell: pwsh
+
+      - name: Create draft GitHub release
+        if: steps.tag_check.outputs.exists == 'false'
+        run: >-
+          gh release create ${{ steps.version.outputs.tag }} ${{ steps.archive.outputs.archive_name }}
+          --draft
+          --title "OSCAvatarRecord ${{ steps.version.outputs.version }}"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: pwsh
