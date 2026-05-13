@@ -1,0 +1,16 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^dotnet build -c Debug 2>&1$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^\\$ErrorActionPreference='Stop';\nfunction Replace-InFile\\(\\[string\\]\\$path, \\[hashtable\\]\\$map\\) \\{\n  \\$text = Get-Content -Path \\$path -Raw -Encoding UTF8;\n  foreach \\(\\$k in \\$map\\.Keys\\) \\{ \\$text = \\$text\\.Replace\\(\\$k, \\$map\\[\\$k\\]\\); \\}\n  Set-Content -Path \\$path -Value \\$text -Encoding UTF8;\n\\}\n\n\\$mainMap = \\[ordered\\]@\\{\n  '_session'='session';\n  '_connectButton'='connectButton';\n  '_oscEndPointField'='oscEndPointField';\n  '_stateTreeView'='stateTreeView';\n  '_treeContextMenu'='treeContextMenu';\n  '_editValueMenuItem'='editValueMenuItem';\n  '_forceSyncMenuItem'='forceSyncMenuItem';\n  '_deleteMenuItem'='deleteMenuItem';\n  '_statusStrip'='statusStrip';\n  '_statusTextLabel'='statusTextLabel';\n  '_discoveredServiceIds'='discoveredServiceIds';\n  '_selectedNodes'='selectedNodes';\n  '_editingOriginalText'='editingOriginalText';\n  '_activeAvatarFont'='activeAvatarFont';\n  '_lastValidOscEndPoint'='lastValidOscEndPoint';\n  '_ignoreTreeEvents'='ignoreTreeEvents';\n  '_initialized'='initialized';\n\\};\n\n\\$locMap = \\[ordered\\]@\\{\n  '_resourceManager'='resourceManager';\n  '_overrideCulture'='overrideCulture';\n\\};\n\n\\$runtimeMap = \\[ordered\\]@\\{\n  'UPSERT_DEBOUNCE_MS'='upsertDebounceMs';\n  'UI_SIGNAL_DEBOUNCE_MS'='uiSignalDebounceMs';\n  '_repository'='repository';\n  '_advertiser'='advertiser';\n  '_ownsAdvertiser'='ownsAdvertiser';\n  '_connectionLock'='connectionLock';\n  '_upsertFlushLock'='upsertFlushLock';\n  '_liveStateLock'='liveStateLock';\n  '_remoteSendersLock'='remoteSendersLock';\n  '_pendingUpserts'='pendingUpserts';\n  '_liveStates'='liveStates';\n  '_remoteSenders'='remoteSenders';\n  '_changeNotificationQueue'='changeNotificationQueue';\n  '_upsertDebounceTimer'='upsertDebounceTimer';\n  '_uiSignalDebounceTimer'='uiSignalDebounceTimer';\n  '_uiSignalPending'='uiSignalPending';\n  '_avatarIdLock'='avatarIdLock';\n  '_avatarId'='avatarId';\n  '_runtimeCancellationTokenSource'='runtimeCancellationTokenSource';\n  '_receiverOscIO'='receiverOscIO';\n  '_receiverTask'='receiverTask';\n  '_isDisposed'='isDisposed';\n\\};\n\nReplace-InFile 'e:\\\\Codes\\\\OSCAvatarRecord\\\\Frontend\\\\MainForm\\.cs' \\$mainMap;\nReplace-InFile 'e:\\\\Codes\\\\OSCAvatarRecord\\\\Frontend\\\\LocalizationManager\\.cs' \\$locMap;\nReplace-InFile 'e:\\\\Codes\\\\OSCAvatarRecord\\\\Backend\\\\OscRuntimeSession\\.cs' \\$runtimeMap;\nWrite-Output 'Renaming completed\\.'$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^Get-ChildItem -Recurse -Filter \\*\\.cs \\| Select-String -Pattern '\\\\\\.Id\\\\b\\|\\\\\\.Name\\\\b\\|\\\\\\.Address\\\\b\\|\\\\\\.Port\\\\b\\|\\\\\\.Changes\\\\b\\|\\\\\\.ChangeType\\\\b\\|\\\\\\.AvatarId\\\\b\\|\\\\\\.ParameterName\\\\b\\|\\\\\\.NewValue\\\\b\\|\\\\\\.SyncEnabled\\\\b' \\| ForEach-Object \\{\"\\$\\(\\$_\\.Path\\):\\$\\(\\$_\\.LineNumber\\):\\$\\(\\$_\\.Line\\.Trim\\(\\)\\)\"\\}$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+bin/
+obj/
+*.db
+*.dat
+*.db-journal
+*.db-wal
+*.db-shm

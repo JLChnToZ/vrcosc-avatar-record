@@ -1,0 +1,62 @@
+name: Manual Build Publish
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build-publish:
+    runs-on: windows-latest
+
+    env:
+      PROJECT_PATH: OSCAvatarRecord.csproj
+      PUBLISH_DIR: bin/Release/net8.0-windows/win-x64/publish
+      ARTIFACT_NAME: OSCAvatarRecord-publish
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup .NET 8 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore $env:PROJECT_PATH
+        shell: pwsh
+
+      - name: Build release
+        run: dotnet build $env:PROJECT_PATH --configuration Release --no-restore
+        shell: pwsh
+
+      - name: Publish application
+        run: >-
+          dotnet publish $env:PROJECT_PATH
+          --configuration Release
+          --no-build
+          --runtime win-x64
+          --self-contained false
+        shell: pwsh
+
+      - name: Create publish archive
+        id: archive
+        run: |
+          if (-not (Test-Path $env:PUBLISH_DIR)) {
+            throw "Publish directory not found: $env:PUBLISH_DIR"
+          }
+
+          $archiveName = "OSCAvatarRecord-win-x64-${{ github.run_number }}.zip"
+          Compress-Archive -Path "$env:PUBLISH_DIR\*" -DestinationPath $archiveName -Force
+          "archive_name=$archiveName" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
+        shell: pwsh
+
+      - name: Upload publish artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.ARTIFACT_NAME }}
+          path: ${{ steps.archive.outputs.archive_name }}
+          if-no-files-found: error
+          retention-days: 30

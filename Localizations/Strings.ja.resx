@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="App.Title" xml:space="preserve">
+    <value>VRCOSC アバターパラメータレコーダー</value>
+  </data>
+
+  <data name="Program.Error.ApplicationStart" xml:space="preserve">
+    <value>アプリケーションの起動に失敗しました。</value>
+  </data>
+  <data name="Program.Error.UIThreadException" xml:space="preserve">
+    <value>UI スレッド例外が発生しました。</value>
+  </data>
+  <data name="Program.Error.FatalUnhandled" xml:space="preserve">
+    <value>重大な未処理例外が発生しました。</value>
+  </data>
+  <data name="Program.Error.UnknownUnhandled" xml:space="preserve">
+    <value>不明な未処理例外が発生しました。</value>
+  </data>
+
+  <data name="MainForm.Button.Connect" xml:space="preserve">
+    <value>接続</value>
+  </data>
+  <data name="MainForm.Button.Disconnect" xml:space="preserve">
+    <value>切断</value>
+  </data>
+  <data name="MainForm.Menu.EditValue" xml:space="preserve">
+    <value>値を編集</value>
+  </data>
+  <data name="MainForm.Menu.ForceSyncOnce" xml:space="preserve">
+    <value>1回だけ強制同期</value>
+  </data>
+  <data name="MainForm.Menu.RemoveFromDatabase" xml:space="preserve">
+    <value>データベースから削除</value>
+  </data>
+  <data name="MainForm.Group.Connection" xml:space="preserve">
+    <value>接続</value>
+  </data>
+  <data name="MainForm.Field.Address" xml:space="preserve">
+    <value>アドレス</value>
+  </data>
+  <data name="MainForm.Field.SendPort" xml:space="preserve">
+    <value>送信ポート</value>
+  </data>
+  <data name="MainForm.Field.ListenPort" xml:space="preserve">
+    <value>受信ポート</value>
+  </data>
+  <data name="MainForm.Field.OSCQueryTcp" xml:space="preserve">
+    <value>OSCQuery TCP</value>
+  </data>
+  <data name="MainForm.Field.Database" xml:space="preserve">
+    <value>データベース</value>
+  </data>
+
+  <data name="MainForm.Status.InitializingDatabase" xml:space="preserve">
+    <value>データベースを初期化しています...</value>
+  </data>
+  <data name="MainForm.Status.Ready" xml:space="preserve">
+    <value>準備完了</value>
+  </data>
+  <data name="MainForm.Status.InitializationFailed" xml:space="preserve">
+    <value>初期化に失敗しました</value>
+  </data>
+  <data name="MainForm.Status.Disconnecting" xml:space="preserve">
+    <value>切断しています...</value>
+  </data>
+  <data name="MainForm.Status.Disconnected" xml:space="preserve">
+    <value>切断されました</value>
+  </data>
+  <data name="MainForm.Status.Connecting" xml:space="preserve">
+    <value>接続しています...</value>
+  </data>
+  <data name="MainForm.Status.Connected" xml:space="preserve">
+    <value>接続されました</value>
+  </data>
+  <data name="MainForm.Status.ConnectionError" xml:space="preserve">
+    <value>接続エラー</value>
+  </data>
+  <data name="MainForm.Status.SyncSuspended" xml:space="preserve">
+    <value>切断済み: 同期は一時停止されています。</value>
+  </data>
+  <data name="MainForm.Status.EditingHint" xml:space="preserve">
+    <value>値を編集中: Enter で適用、Esc でキャンセル。</value>
+  </data>
+  <data name="MainForm.Status.ForceSyncedOne" xml:space="preserve">
+    <value>{0} 件の項目を強制同期しました。</value>
+  </data>
+  <data name="MainForm.Status.ForceSyncedMany" xml:space="preserve">
+    <value>{0} 件の項目を強制同期しました。</value>
+  </data>
+  <data name="MainForm.Status.ForceSyncedNone" xml:space="preserve">
+    <value>強制同期された項目はありません。</value>
+  </data>
+  <data name="MainForm.Status.WaitingForServices" xml:space="preserve">
+    <value>リモートサービスを待機しています...</value>
+  </data>
+  <data name="MainForm.Status.ConnectedToOneService" xml:space="preserve">
+    <value>1 件のリモートサービスに接続しました</value>
+  </data>
+  <data name="MainForm.Status.ConnectedToManyServices" xml:space="preserve">
+    <value>{0} 件のリモートサービスに接続しました</value>
+  </data>
+  <data name="MainForm.Status.ConnectedListening" xml:space="preserve">
+    <value>接続済み - OSC データを待機しています...</value>
+  </data>
+  <data name="MainForm.Status.NoOscTrafficHint" xml:space="preserve">
+    <value>接続済みですが、まだ OSC データがありません。VRChat の OSC 出力ポート（通常は 9001）を確認してください。</value>
+  </data>
+  <data name="MainForm.Status.ReceivingOsc" xml:space="preserve">
+    <value>OSC データを受信しています。</value>
+  </data>
+  <data name="MainForm.Status.ReceivingOscWaitingAvatar" xml:space="preserve">
+    <value>OSC を受信中です。/avatar/change を待っています。</value>
+  </data>
+
+  <data name="MainForm.Error.InitializeDatabase" xml:space="preserve">
+    <value>データベースの初期化に失敗しました。</value>
+  </data>
+  <data name="MainForm.Error.InvalidConnectionSettings" xml:space="preserve">
+    <value>接続設定が無効です。</value>
+  </data>
+  <data name="MainForm.Error.InvalidOscEndPoint" xml:space="preserve">
+    <value>無効な OSC エンドポイントです。</value>
+  </data>
+  <data name="MainForm.Error.ChangeConnectionState" xml:space="preserve">
+    <value>接続状態の変更に失敗しました。</value>
+  </data>
+  <data name="MainForm.Error.ReloadTree" xml:space="preserve">
+    <value>ツリービューの再読み込みに失敗しました。</value>
+  </data>
+  <data name="MainForm.Error.UpdateSyncState" xml:space="preserve">
+    <value>同期状態の更新に失敗しました。</value>
+  </data>
+  <data name="MainForm.Error.InvalidValue" xml:space="preserve">
+    <value>無効な値です。</value>
+  </data>
+  <data name="MainForm.Error.InvalidValueType" xml:space="preserve">
+    <value>値の型がこのパラメーターと一致しません。</value>
+  </data>
+  <data name="MainForm.Error.UpdateParameterValue" xml:space="preserve">
+    <value>パラメーター値の更新に失敗しました。</value>
+  </data>
+  <data name="MainForm.Error.DeleteSelection" xml:space="preserve">
+    <value>選択した項目の削除に失敗しました。</value>
+  </data>
+  <data name="MainForm.Error.DialogTitle" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+
+  <data name="MainForm.Confirm.Title" xml:space="preserve">
+    <value>削除の確認</value>
+  </data>
+  <data name="MainForm.Confirm.DeleteSelected" xml:space="preserve">
+    <value>選択した項目をデータベースから削除しますか？</value>
+  </data>
+  <data name="MainForm.Confirm.DeleteAvatar" xml:space="preserve">
+    <value>このアバターのすべてのパラメーターを削除しますか？</value>
+  </data>
+  <data name="MainForm.Confirm.DeleteParameter" xml:space="preserve">
+    <value>このパラメーターをデータベースから削除しますか？</value>
+  </data>
+
+  <data name="MainForm.Parameter.DisabledSuffix" xml:space="preserve">
+    <value>（無効）</value>
+  </data>
+</root>

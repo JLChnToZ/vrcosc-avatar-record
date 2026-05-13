@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="App.Title" xml:space="preserve">
+    <value>VRCOSC 虚拟形象记录器</value>
+  </data>
+
+  <data name="Program.Error.ApplicationStart" xml:space="preserve">
+    <value>应用程序启动失败。</value>
+  </data>
+  <data name="Program.Error.UIThreadException" xml:space="preserve">
+    <value>发生了 UI 线程异常。</value>
+  </data>
+  <data name="Program.Error.FatalUnhandled" xml:space="preserve">
+    <value>发生了致命的未处理异常。</value>
+  </data>
+  <data name="Program.Error.UnknownUnhandled" xml:space="preserve">
+    <value>未知的未处理异常。</value>
+  </data>
+
+  <data name="MainForm.Button.Connect" xml:space="preserve">
+    <value>连接</value>
+  </data>
+  <data name="MainForm.Button.Disconnect" xml:space="preserve">
+    <value>断开连接</value>
+  </data>
+  <data name="MainForm.Menu.EditValue" xml:space="preserve">
+    <value>编辑值</value>
+  </data>
+  <data name="MainForm.Menu.ForceSyncOnce" xml:space="preserve">
+    <value>强制同步一次</value>
+  </data>
+  <data name="MainForm.Menu.RemoveFromDatabase" xml:space="preserve">
+    <value>从数据库中移除</value>
+  </data>
+  <data name="MainForm.Group.Connection" xml:space="preserve">
+    <value>连接</value>
+  </data>
+  <data name="MainForm.Field.Address" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="MainForm.Field.SendPort" xml:space="preserve">
+    <value>发送端口</value>
+  </data>
+  <data name="MainForm.Field.ListenPort" xml:space="preserve">
+    <value>监听端口</value>
+  </data>
+  <data name="MainForm.Field.OSCQueryTcp" xml:space="preserve">
+    <value>OSCQuery TCP</value>
+  </data>
+  <data name="MainForm.Field.Database" xml:space="preserve">
+    <value>数据库</value>
+  </data>
+
+  <data name="MainForm.Status.InitializingDatabase" xml:space="preserve">
+    <value>正在初始化数据库...</value>
+  </data>
+  <data name="MainForm.Status.Ready" xml:space="preserve">
+    <value>就绪</value>
+  </data>
+  <data name="MainForm.Status.InitializationFailed" xml:space="preserve">
+    <value>初始化失败</value>
+  </data>
+  <data name="MainForm.Status.Disconnecting" xml:space="preserve">
+    <value>正在断开连接...</value>
+  </data>
+  <data name="MainForm.Status.Disconnected" xml:space="preserve">
+    <value>已断开连接</value>
+  </data>
+  <data name="MainForm.Status.Connecting" xml:space="preserve">
+    <value>正在连接...</value>
+  </data>
+  <data name="MainForm.Status.Connected" xml:space="preserve">
+    <value>已连接</value>
+  </data>
+  <data name="MainForm.Status.ConnectionError" xml:space="preserve">
+    <value>连接错误</value>
+  </data>
+  <data name="MainForm.Status.SyncSuspended" xml:space="preserve">
+    <value>已断开连接：同步已暂停。</value>
+  </data>
+  <data name="MainForm.Status.EditingHint" xml:space="preserve">
+    <value>正在编辑值：按 Enter 应用，按 Esc 取消。</value>
+  </data>
+  <data name="MainForm.Status.ForceSyncedOne" xml:space="preserve">
+    <value>已强制同步 {0} 个条目。</value>
+  </data>
+  <data name="MainForm.Status.ForceSyncedMany" xml:space="preserve">
+    <value>已强制同步 {0} 个条目。</value>
+  </data>
+  <data name="MainForm.Status.ForceSyncedNone" xml:space="preserve">
+    <value>没有条目被强制同步。</value>
+  </data>
+  <data name="MainForm.Status.WaitingForServices" xml:space="preserve">
+    <value>正在等待远程服务...</value>
+  </data>
+  <data name="MainForm.Status.ConnectedToOneService" xml:space="preserve">
+    <value>已连接到 1 个远程服务</value>
+  </data>
+  <data name="MainForm.Status.ConnectedToManyServices" xml:space="preserve">
+    <value>已连接到 {0} 个远程服务</value>
+  </data>
+  <data name="MainForm.Status.ConnectedListening" xml:space="preserve">
+    <value>已连接，正在监听 OSC 数据...</value>
+  </data>
+  <data name="MainForm.Status.NoOscTrafficHint" xml:space="preserve">
+    <value>已连接但尚未收到 OSC 数据。请确认 VRChat OSC 输出端口（通常为 9001）。</value>
+  </data>
+  <data name="MainForm.Status.ReceivingOsc" xml:space="preserve">
+    <value>正在接收 OSC 数据。</value>
+  </data>
+  <data name="MainForm.Status.ReceivingOscWaitingAvatar" xml:space="preserve">
+    <value>正在接收 OSC，等待 /avatar/change。</value>
+  </data>
+
+  <data name="MainForm.Error.InitializeDatabase" xml:space="preserve">
+    <value>初始化数据库失败。</value>
+  </data>
+  <data name="MainForm.Error.InvalidConnectionSettings" xml:space="preserve">
+    <value>连接设置无效。</value>
+  </data>
+  <data name="MainForm.Error.InvalidOscEndPoint" xml:space="preserve">
+    <value>无效的 OSC 终结点。</value>
+  </data>
+  <data name="MainForm.Error.ChangeConnectionState" xml:space="preserve">
+    <value>更改连接状态失败。</value>
+  </data>
+  <data name="MainForm.Error.ReloadTree" xml:space="preserve">
+    <value>重新加载树视图失败。</value>
+  </data>
+  <data name="MainForm.Error.UpdateSyncState" xml:space="preserve">
+    <value>更新同步状态失败。</value>
+  </data>
+  <data name="MainForm.Error.InvalidValue" xml:space="preserve">
+    <value>无效的值。</value>
+  </data>
+  <data name="MainForm.Error.InvalidValueType" xml:space="preserve">
+    <value>值类型与此参数不匹配。</value>
+  </data>
+  <data name="MainForm.Error.UpdateParameterValue" xml:space="preserve">
+    <value>更新参数值失败。</value>
+  </data>
+  <data name="MainForm.Error.DeleteSelection" xml:space="preserve">
+    <value>删除所选条目失败。</value>
+  </data>
+  <data name="MainForm.Error.DialogTitle" xml:space="preserve">
+    <value>错误</value>
+  </data>
+
+  <data name="MainForm.Confirm.Title" xml:space="preserve">
+    <value>确认删除</value>
+  </data>
+  <data name="MainForm.Confirm.DeleteSelected" xml:space="preserve">
+    <value>要从数据库中删除所选条目吗？</value>
+  </data>
+  <data name="MainForm.Confirm.DeleteAvatar" xml:space="preserve">
+    <value>要删除此虚拟形象的所有参数吗？</value>
+  </data>
+  <data name="MainForm.Confirm.DeleteParameter" xml:space="preserve">
+    <value>要从数据库中删除此参数吗？</value>
+  </data>
+
+  <data name="MainForm.Parameter.DisabledSuffix" xml:space="preserve">
+    <value>（已禁用）</value>
+  </data>
+</root>
