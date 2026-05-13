@@ -83,9 +83,8 @@ jobs:
       - name: Check if release tag exists
         id: tag_check
         run: |
-          git fetch --tags --force
-          git rev-parse --verify --quiet "refs/tags/${{ steps.version.outputs.tag }}" | Out-Null
-          if ($LASTEXITCODE -eq 0) {
+          $tagOutput = git ls-remote --tags origin "refs/tags/${{ steps.version.outputs.tag }}"
+          if ($tagOutput) {
             "exists=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
           } else {
             "exists=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Encoding utf8 -Append
